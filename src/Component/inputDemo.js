@@ -1,162 +1,34 @@
- export const realInput= [
+export const realInput = [
     {
-        "form_id": 186653,
+
         "activity_type": "enemy_orbat",
         "created_date": "2025-05-06T10:12:55.848392",
-        "coordinates": [
-            [
-                79.80056,
-                31.48417
-            ]
-        ],
-        "base_coordinates": [
-            79.80056,
-            31.48417
-        ],
-        "@timestamp": "2025-05-06T10:12:55.848277"
     },
     {
-        "form_id": 171068,
+
         "activity_type": "joint_exercise",
         "created_date": "2025-03-08T14:13:11Z",
-        "location_name": "bangalore",
-        "coordinates": [
-            [
-                77.5946,
-                12.9716
-            ]
-        ]
-    },
-    {
-        "form_id": 186653,
-        "activity_type": "enemy_orbat",
-        "created_date": "2025-05-06T10:12:55.848392",
-        "coordinates": [
-            [
-                79.80056,
-                31.48417
-            ]
-        ],
-        "base_coordinates": [
-            79.80056,
-            31.48417
-        ]
-    },
-    {
-        "form_id": 179434,
-        "activity_type": "enemy_orbat",
-        "created_date": "2025-03-19T18:11:39Z"
-    },
-    {
-        "form_id": 182883,
-        "activity_type": "miscellaneous",
-        "created_date": "2025-03-23T10:31:58Z",
-        "coordinates": [
-            [
-                74.6097,
-                31.0944
-            ]
-        ],
-        "location_name": "ganda singh wala"
-    },
-    {
-        "form_id": 179635,
-        "activity_type": "miscellaneous",
-        "created_date": "2025-03-20T10:58:52Z",
-        "coordinates": [
-            [
-                74.6097,
-                31.0944
-            ]
-        ],
-        "location_name": "ganda singh wala"
-    },
-    {
-        "form_id": 210024,
-        "activity_type": "equipment",
-        "created_date": "2025-05-17T07:28:50.969698"
-    },
-    {
-        "activity_type": "equipment",
-        "created_date": "2025-05-16T13:29:45.798190",
-        "location_name": "akola",
-        "coordinates": [
-            [
-                77.0082,
-                20.7002
-            ]
-        ]
-    },
-    {
-        "form_id": 204582,
-        "activity_type": "dynamic_activity",
-        "created_date": "2025-05-05T09:58:03.190653",
-        "location_name": "south east of burang   opposite eastern ladakh",
-        "coordinates": [
-            [
-                81.1207,
-                30.3001
-            ]
-        ]
-    },
-    {
-        "activity_type": "deployment",
-        "created_date": "2025-04-21T17:46:15Z",
-        "location_name": "lhasa",
-        "coordinates": [
-            [
-                91.1721,
-                29.6525
-            ]
-        ]
-    },
-    {
-        "activity_type": "joint_exercise",
-        "created_date": "2025-03-08T14:13:11Z",
-        "location_name": "bangalore",
-        "coordinates": [
-            [
-                77.5946,
-                12.9716
-            ]
-        ]
+
     },
     {
         "activity_type": "enemy_orbat",
         "created_date": "2025-05-06T10:12:55.848392",
-        "coordinates": [
-            [
-                79.80056,
-                31.48417
-            ]
-        ]
+
     },
     {
         "activity_type": "enemy_orbat",
         "created_date": "2025-03-19T18:11:39Z"
     },
     {
+
         "activity_type": "miscellaneous",
         "created_date": "2025-03-23T10:31:58Z",
-        "duration": 1,
-        "coordinates": [
-            [
-                74.6097,
-                31.0944
-            ]
-        ],
-        "location_name": "ganda singh wala"
+
     },
     {
         "activity_type": "miscellaneous",
         "created_date": "2025-03-20T10:58:52Z",
-        "coordinates": [
-            [
-                74.6097,
-                31.0944
-            ]
-        ],
-        "location_name": "ganda singh wala"
+
     },
     {
         "activity_type": "equipment",
@@ -165,37 +37,159 @@
     {
         "activity_type": "equipment",
         "created_date": "2025-05-16T13:29:45.798190",
-        "form_activity_type": "Profile",
-        "location_name": "akola",
-        "coordinates": [
-            [
-                77.0082,
-                20.7002
-            ]
-        ]
+
     },
     {
         "activity_type": "dynamic_activity",
         "created_date": "2025-05-05T09:58:03.190653",
-        "location_name": "south east of burang   opposite eastern ladakh",
-        "coordinates": [
-            [
-                81.1207,
-                30.3001
-            ]
-        ]
+
     },
     {
         "activity_type": "deployment",
         "created_date": "2025-04-21T17:46:15Z",
-        "location_name": "lhasa",
-        "coordinates": [
-            [
-                91.1721,
-                29.6525
-            ]
-        ]
-    }
+
+    },
+    {
+        "activity_type": "joint_exercise",
+        "created_date": "2025-03-08T14:13:11Z",
+
+    },
+    {
+        "activity_type": "enemy_orbat",
+        "created_date": "2025-05-06T10:12:55.848392",
+
+    },
+    {
+        "activity_type": "enemy_orbat",
+        "created_date": "2025-03-19T18:11:39Z"
+    },
+    {
+        "activity_type": "miscellaneous",
+        "created_date": "2025-03-23T10:31:58Z",
+
+    },
+    {
+        "activity_type": "miscellaneous",
+        "created_date": "2025-03-20T10:58:52Z",
+
+    },
+    {
+        "activity_type": "equipment",
+        "created_date": "2025-05-17T07:28:50.969698"
+    },
+    {
+        "activity_type": "equipment",
+        "created_date": "2025-05-16T13:29:45.798190",
+
+    },
+    {
+        "activity_type": "dynamic_activity",
+        "created_date": "2025-05-05T09:58:03.190653",
+
+    },
+    {
+        "activity_type": "deployment",
+        "created_date": "2025-04-21T17:46:15Z",
+
+    },
+
+
+    {
+
+        "activity_type": "enemy_orbat",
+        "created_date": "2024-05-06T10:12:55.848392",
+    },
+    {
+
+        "activity_type": "joint_exercise",
+        "created_date": "2024-03-08T14:13:11Z",
+
+    },
+    {
+        "activity_type": "enemy_orbat",
+        "created_date": "2024-05-06T10:12:55.848392",
+
+    },
+    {
+        "activity_type": "enemy_orbat",
+        "created_date": "2024-03-19T18:11:39Z"
+    },
+    {
+
+        "activity_type": "miscellaneous",
+        "created_date": "2024-03-23T10:31:58Z",
+
+    },
+    {
+        "activity_type": "miscellaneous",
+        "created_date": "2025-03-20T10:58:52Z",
+
+    },
+    {
+        "activity_type": "equipment",
+        "created_date": "2024-05-17T07:28:50.969698"
+    },
+    {
+        "activity_type": "equipment",
+        "created_date": "2024-05-16T13:29:45.798190",
+
+    },
+    {
+        "activity_type": "dynamic_activity",
+        "created_date": "2024-05-05T09:58:03.190653",
+
+    },
+    {
+        "activity_type": "deployment",
+        "created_date": "2024-04-21T17:46:15Z",
+
+    },
+    {
+        "activity_type": "joint_exercise",
+        "created_date": "2024-03-08T14:13:11Z",
+
+    },
+    {
+        "activity_type": "enemy_orbat",
+        "created_date": "2024-05-06T10:12:55.848392",
+
+    },
+    {
+        "activity_type": "enemy_orbat",
+        "created_date": "2024-03-19T18:11:39Z"
+    },
+    {
+        "activity_type": "miscellaneous",
+        "created_date": "2024-03-23T10:31:58Z",
+
+    },
+    {
+        "activity_type": "miscellaneous",
+        "created_date": "2024-03-20T10:58:52Z",
+
+    },
+    {
+        "activity_type": "equipment",
+        "created_date": "2024-05-17T07:28:50.969698"
+    },
+    {
+        "activity_type": "equipment",
+        "created_date": "2024-05-16T13:29:45.798190",
+
+    },
+    {
+        "activity_type": "dynamic_activity",
+        "created_date": "2024-05-05T09:58:03.190653",
+
+    },
+    {
+        "activity_type": "deployment",
+        "created_date": "2024-04-21T17:46:15Z",
+
+    },
+
+
+
 ]
 
 
@@ -246,6 +240,308 @@ const outputMain = {
   }
 }
 
+const newDemo = {
+    "year": 2023,
+    "months": [
+        {
+            "month": "February",
+            "days": [
+                { "date": 1, "profit": 1, "revenue": 2, "freeCashFlow": 0 },
+                { "date": 2, "profit": 2, "revenue": 3, "freeCashFlow": 1 },
+                { "date": 3, "profit": 3, "revenue": 4, "freeCashFlow": 1 },
+                { "date": 4, "profit": 4, "revenue": 5, "freeCashFlow": 2 },
+                { "date": 5, "profit": 5, "revenue": 6, "freeCashFlow": 1 },
+                { "date": 6, "profit": 6, "revenue": 7, "freeCashFlow": 2 },
+                { "date": 7, "profit": 7, "revenue": 8, "freeCashFlow": 1 },
+                { "date": 8, "profit": 8, "revenue": 9, "freeCashFlow": 2 },
+                { "date": 9, "profit": 9, "revenue": 10, "freeCashFlow": 1 },
+                { "date": 10, "profit": 10, "revenue": 11, "freeCashFlow": 2 },
+                { "date": 11, "profit": 11, "revenue": 12, "freeCashFlow": 1 },
+                { "date": 12, "profit": 12, "revenue": 13, "freeCashFlow": 2 },
+                { "date": 13, "profit": 13, "revenue": 14, "freeCashFlow": 1 },
+                { "date": 14, "profit": 14, "revenue": 15, "freeCashFlow": 2 },
+                { "date": 15, "profit": 15, "revenue": 16, "freeCashFlow": 1 },
+                { "date": 16, "profit": 16, "revenue": 17, "freeCashFlow": 2 },
+                { "date": 17, "profit": 17, "revenue": 18, "freeCashFlow": 1 },
+                { "date": 18, "profit": 18, "revenue": 19, "freeCashFlow": 2 },
+                { "date": 19, "profit": 19, "revenue": 20, "freeCashFlow": 1 },
+                { "date": 20, "profit": 20, "revenue": 21, "freeCashFlow": 2 },
+                { "date": 21, "profit": 21, "revenue": 22, "freeCashFlow": 1 },
+                { "date": 22, "profit": 22, "revenue": 23, "freeCashFlow": 2 },
+                { "date": 23, "profit": 23, "revenue": 24, "freeCashFlow": 1 },
+                { "date": 24, "profit": 24, "revenue": 25, "freeCashFlow": 2 },
+                { "date": 25, "profit": 25, "revenue": 26, "freeCashFlow": 1 },
+                { "date": 26, "profit": 26, "revenue": 27, "freeCashFlow": 2 },
+                { "date": 27, "profit": 27, "revenue": 28, "freeCashFlow": 1 },
+                { "date": 28, "profit": 28, "revenue": 29, "freeCashFlow": 2 }
+            ]
+        },
+        {
+            "month": "March",
+            "days": [
+                { "date": 1, "profit": 1, "revenue": 2, "freeCashFlow": 0 },
+                { "date": 2, "profit": 2, "revenue": 3, "freeCashFlow": 1 },
+                { "date": 3, "profit": 3, "revenue": 4, "freeCashFlow": 1 },
+                { "date": 4, "profit": 4, "revenue": 5, "freeCashFlow": 2 },
+                { "date": 5, "profit": 5, "revenue": 6, "freeCashFlow": 1 },
+                { "date": 6, "profit": 6, "revenue": 7, "freeCashFlow": 2 },
+                { "date": 7, "profit": 7, "revenue": 8, "freeCashFlow": 1 },
+                { "date": 8, "profit": 8, "revenue": 9, "freeCashFlow": 2 },
+                { "date": 9, "profit": 9, "revenue": 10, "freeCashFlow": 1 },
+                { "date": 10, "profit": 10, "revenue": 11, "freeCashFlow": 2 },
+                { "date": 11, "profit": 11, "revenue": 12, "freeCashFlow": 1 },
+                { "date": 12, "profit": 12, "revenue": 13, "freeCashFlow": 2 },
+                { "date": 13, "profit": 13, "revenue": 14, "freeCashFlow": 1 },
+                { "date": 14, "profit": 14, "revenue": 15, "freeCashFlow": 2 },
+                { "date": 15, "profit": 15, "revenue": 16, "freeCashFlow": 1 },
+                { "date": 16, "profit": 16, "revenue": 17, "freeCashFlow": 2 },
+                { "date": 17, "profit": 17, "revenue": 18, "freeCashFlow": 1 },
+                { "date": 18, "profit": 18, "revenue": 19, "freeCashFlow": 2 },
+                { "date": 19, "profit": 19, "revenue": 20, "freeCashFlow": 1 },
+                { "date": 20, "profit": 20, "revenue": 21, "freeCashFlow": 2 },
+                { "date": 21, "profit": 21, "revenue": 22, "freeCashFlow": 1 },
+                { "date": 22, "profit": 22, "revenue": 23, "freeCashFlow": 2 },
+                { "date": 23, "profit": 23, "revenue": 24, "freeCashFlow": 1 },
+                { "date": 24, "profit": 24, "revenue": 25, "freeCashFlow": 2 },
+                { "date": 25, "profit": 25, "revenue": 26, "freeCashFlow": 1 },
+                { "date": 26, "profit": 26, "revenue": 27, "freeCashFlow": 2 },
+                { "date": 27, "profit": 27, "revenue": 28, "freeCashFlow": 1 },
+                { "date": 28, "profit": 28, "revenue": 29, "freeCashFlow": 2 }
+            ]
+        },
+        {
+            "month": "April",
+            "days": [
+                { "date": 1, "profit": 1, "revenue": 2, "freeCashFlow": 0 },
+                { "date": 2, "profit": 2, "revenue": 3, "freeCashFlow": 1 },
+                { "date": 3, "profit": 3, "revenue": 4, "freeCashFlow": 1 },
+                { "date": 4, "profit": 4, "revenue": 5, "freeCashFlow": 2 },
+                { "date": 5, "profit": 5, "revenue": 6, "freeCashFlow": 1 },
+                { "date": 6, "profit": 6, "revenue": 7, "freeCashFlow": 2 },
+                { "date": 7, "profit": 7, "revenue": 8, "freeCashFlow": 1 },
+                { "date": 8, "profit": 8, "revenue": 9, "freeCashFlow": 2 },
+                { "date": 9, "profit": 9, "revenue": 10, "freeCashFlow": 1 },
+                { "date": 10, "profit": 10, "revenue": 11, "freeCashFlow": 2 },
+                { "date": 11, "profit": 11, "revenue": 12, "freeCashFlow": 1 },
+                { "date": 12, "profit": 12, "revenue": 13, "freeCashFlow": 2 },
+                { "date": 13, "profit": 13, "revenue": 14, "freeCashFlow": 1 },
+                { "date": 14, "profit": 14, "revenue": 15, "freeCashFlow": 2 },
+                { "date": 15, "profit": 15, "revenue": 16, "freeCashFlow": 1 },
+                { "date": 16, "profit": 16, "revenue": 17, "freeCashFlow": 2 },
+                { "date": 17, "profit": 17, "revenue": 18, "freeCashFlow": 1 },
+                { "date": 18, "profit": 18, "revenue": 19, "freeCashFlow": 2 },
+                { "date": 19, "profit": 19, "revenue": 20, "freeCashFlow": 1 },
+                { "date": 20, "profit": 20, "revenue": 21, "freeCashFlow": 2 },
+                { "date": 21, "profit": 21, "revenue": 22, "freeCashFlow": 1 },
+                { "date": 22, "profit": 22, "revenue": 23, "freeCashFlow": 2 },
+                { "date": 23, "profit": 23, "revenue": 24, "freeCashFlow": 1 },
+                { "date": 24, "profit": 24, "revenue": 25, "freeCashFlow": 2 },
+                { "date": 25, "profit": 25, "revenue": 26, "freeCashFlow": 1 },
+                { "date": 26, "profit": 26, "revenue": 27, "freeCashFlow": 2 },
+                { "date": 27, "profit": 27, "revenue": 28, "freeCashFlow": 1 },
+                { "date": 28, "profit": 28, "revenue": 29, "freeCashFlow": 2 }
+            ]
+        },
+        {
+            "month": "May",
+            "days": [
+                { "date": 1, "profit": 1, "revenue": 2, "freeCashFlow": 0 },
+                { "date": 2, "profit": 2, "revenue": 3, "freeCashFlow": 1 },
+                { "date": 3, "profit": 3, "revenue": 4, "freeCashFlow": 1 },
+                { "date": 4, "profit": 4, "revenue": 5, "freeCashFlow": 2 },
+                { "date": 5, "profit": 5, "revenue": 6, "freeCashFlow": 1 },
+                { "date": 6, "profit": 6, "revenue": 7, "freeCashFlow": 2 },
+                { "date": 7, "profit": 7, "revenue": 8, "freeCashFlow": 1 },
+                { "date": 8, "profit": 8, "revenue": 9, "freeCashFlow": 2 },
+                { "date": 9, "profit": 9, "revenue": 10, "freeCashFlow": 1 },
+                { "date": 10, "profit": 10, "revenue": 11, "freeCashFlow": 2 },
+                { "date": 11, "profit": 11, "revenue": 12, "freeCashFlow": 1 },
+                { "date": 12, "profit": 12, "revenue": 13, "freeCashFlow": 2 },
+                { "date": 13, "profit": 13, "revenue": 14, "freeCashFlow": 1 },
+                { "date": 14, "profit": 14, "revenue": 15, "freeCashFlow": 2 },
+                { "date": 15, "profit": 15, "revenue": 16, "freeCashFlow": 1 },
+                { "date": 16, "profit": 16, "revenue": 17, "freeCashFlow": 2 },
+                { "date": 17, "profit": 17, "revenue": 18, "freeCashFlow": 1 },
+                { "date": 18, "profit": 18, "revenue": 19, "freeCashFlow": 2 },
+                { "date": 19, "profit": 19, "revenue": 20, "freeCashFlow": 1 },
+                { "date": 20, "profit": 20, "revenue": 21, "freeCashFlow": 2 },
+                { "date": 21, "profit": 21, "revenue": 22, "freeCashFlow": 1 },
+                { "date": 22, "profit": 22, "revenue": 23, "freeCashFlow": 2 },
+                { "date": 23, "profit": 23, "revenue": 24, "freeCashFlow": 1 },
+                { "date": 24, "profit": 24, "revenue": 25, "freeCashFlow": 2 },
+                { "date": 25, "profit": 25, "revenue": 26, "freeCashFlow": 1 },
+                { "date": 26, "profit": 26, "revenue": 27, "freeCashFlow": 2 },
+                { "date": 27, "profit": 27, "revenue": 28, "freeCashFlow": 1 },
+                { "date": 28, "profit": 28, "revenue": 29, "freeCashFlow": 2 }
+            ]
+        },
+        {
+            "month": "June",
+            "days": [
+                { "date": 1, "profit": 1, "revenue": 2, "freeCashFlow": 0 },
+                { "date": 2, "profit": 2, "revenue": 3, "freeCashFlow": 1 },
+                { "date": 3, "profit": 3, "revenue": 4, "freeCashFlow": 1 },
+                { "date": 4, "profit": 4, "revenue": 5, "freeCashFlow": 2 },
+                { "date": 5, "profit": 5, "revenue": 6, "freeCashFlow": 1 },
+                { "date": 6, "profit": 6, "revenue": 7, "freeCashFlow": 2 },
+                { "date": 7, "profit": 7, "revenue": 8, "freeCashFlow": 1 },
+                { "date": 8, "profit": 8, "revenue": 9, "freeCashFlow": 2 },
+                { "date": 9, "profit": 9, "revenue": 10, "freeCashFlow": 1 },
+                { "date": 10, "profit": 10, "revenue": 11, "freeCashFlow": 2 },
+                { "date": 11, "profit": 11, "revenue": 12, "freeCashFlow": 1 },
+                { "date": 12, "profit": 12, "revenue": 13, "freeCashFlow": 2 },
+                { "date": 13, "profit": 13, "revenue": 14, "freeCashFlow": 1 },
+                { "date": 14, "profit": 14, "revenue": 15, "freeCashFlow": 2 },
+                { "date": 15, "profit": 15, "revenue": 16, "freeCashFlow": 1 },
+                { "date": 16, "profit": 16, "revenue": 17, "freeCashFlow": 2 },
+                { "date": 17, "profit": 17, "revenue": 18, "freeCashFlow": 1 },
+                { "date": 18, "profit": 18, "revenue": 19, "freeCashFlow": 2 },
+                { "date": 19, "profit": 19, "revenue": 20, "freeCashFlow": 1 },
+                { "date": 20, "profit": 20, "revenue": 21, "freeCashFlow": 2 },
+                { "date": 21, "profit": 21, "revenue": 22, "freeCashFlow": 1 },
+                { "date": 22, "profit": 22, "revenue": 23, "freeCashFlow": 2 },
+                { "date": 23, "profit": 23, "revenue": 24, "freeCashFlow": 1 },
+                { "date": 24, "profit": 24, "revenue": 25, "freeCashFlow": 2 },
+                { "date": 25, "profit": 25, "revenue": 26, "freeCashFlow": 1 },
+                { "date": 26, "profit": 26, "revenue": 27, "freeCashFlow": 2 },
+                { "date": 27, "profit": 27, "revenue": 28, "freeCashFlow": 1 },
+                { "date": 28, "profit": 28, "revenue": 29, "freeCashFlow": 2 }
+            ]
+        },
+        {
+            "month": "July",
+            "days": [
+                { "date": 1, "profit": 1, "revenue": 2, "freeCashFlow": 0 },
+                { "date": 2, "profit": 2, "revenue": 3, "freeCashFlow": 1 },
+                { "date": 3, "profit": 3, "revenue": 4, "freeCashFlow": 1 },
+                { "date": 4, "profit": 4, "revenue": 5, "freeCashFlow": 2 },
+                { "date": 5, "profit": 5, "revenue": 6, "freeCashFlow": 1 },
+                { "date": 6, "profit": 6, "revenue": 7, "freeCashFlow": 2 },
+                { "date": 7, "profit": 7, "revenue": 8, "freeCashFlow": 1 },
+                { "date": 8, "profit": 8, "revenue": 9, "freeCashFlow": 2 },
+                { "date": 9, "profit": 9, "revenue": 10, "freeCashFlow": 1 },
+                { "date": 10, "profit": 10, "revenue": 11, "freeCashFlow": 2 },
+                { "date": 11, "profit": 11, "revenue": 12, "freeCashFlow": 1 },
+                { "date": 12, "profit": 12, "revenue": 13, "freeCashFlow": 2 },
+                { "date": 13, "profit": 13, "revenue": 14, "freeCashFlow": 1 },
+                { "date": 14, "profit": 14, "revenue": 15, "freeCashFlow": 2 },
+                { "date": 15, "profit": 15, "revenue": 16, "freeCashFlow": 1 },
+                { "date": 16, "profit": 16, "revenue": 17, "freeCashFlow": 2 },
+                { "date": 17, "profit": 17, "revenue": 18, "freeCashFlow": 1 },
+                { "date": 18, "profit": 18, "revenue": 19, "freeCashFlow": 2 },
+                { "date": 19, "profit": 19, "revenue": 20, "freeCashFlow": 1 },
+                { "date": 20, "profit": 20, "revenue": 21, "freeCashFlow": 2 },
+                { "date": 21, "profit": 21, "revenue": 22, "freeCashFlow": 1 },
+                { "date": 22, "profit": 22, "revenue": 23, "freeCashFlow": 2 },
+                { "date": 23, "profit": 23, "revenue": 24, "freeCashFlow": 1 },
+                { "date": 24, "profit": 24, "revenue": 25, "freeCashFlow": 2 },
+                { "date": 25, "profit": 25, "revenue": 26, "freeCashFlow": 1 },
+                { "date": 26, "profit": 26, "revenue": 27, "freeCashFlow": 2 },
+                { "date": 27, "profit": 27, "revenue": 28, "freeCashFlow": 1 },
+                { "date": 28, "profit": 28, "revenue": 29, "freeCashFlow": 2 }
+            ]
+        },
+        {
+            "month": "August",
+            "days": [
+                { "date": 1, "profit": 1, "revenue": 2, "freeCashFlow": 0 },
+                { "date": 2, "profit": 2, "revenue": 3, "freeCashFlow": 1 },
+                { "date": 3, "profit": 3, "revenue": 4, "freeCashFlow": 1 },
+                { "date": 4, "profit": 4, "revenue": 5, "freeCashFlow": 2 },
+                { "date": 5, "profit": 5, "revenue": 6, "freeCashFlow": 1 },
+                { "date": 6, "profit": 6, "revenue": 7, "freeCashFlow": 2 },
+                { "date": 7, "profit": 7, "revenue": 8, "freeCashFlow": 1 },
+                { "date": 8, "profit": 8, "revenue": 9, "freeCashFlow": 2 },
+                { "date": 9, "profit": 9, "revenue": 10, "freeCashFlow": 1 },
+                { "date": 10, "profit": 10, "revenue": 11, "freeCashFlow": 2 },
+                { "date": 11, "profit": 11, "revenue": 12, "freeCashFlow": 1 },
+                { "date": 12, "profit": 12, "revenue": 13, "freeCashFlow": 2 },
+                { "date": 13, "profit": 13, "revenue": 14, "freeCashFlow": 1 },
+                { "date": 14, "profit": 14, "revenue": 15, "freeCashFlow": 2 },
+                { "date": 15, "profit": 15, "revenue": 16, "freeCashFlow": 1 },
+                { "date": 16, "profit": 16, "revenue": 17, "freeCashFlow": 2 },
+                { "date": 17, "profit": 17, "revenue": 18, "freeCashFlow": 1 },
+                { "date": 18, "profit": 18, "revenue": 19, "freeCashFlow": 2 },
+                { "date": 19, "profit": 19, "revenue": 20, "freeCashFlow": 1 },
+                { "date": 20, "profit": 20, "revenue": 21, "freeCashFlow": 2 },
+                { "date": 21, "profit": 21, "revenue": 22, "freeCashFlow": 1 },
+                { "date": 22, "profit": 22, "revenue": 23, "freeCashFlow": 2 },
+                { "date": 23, "profit": 23, "revenue": 24, "freeCashFlow": 1 },
+                { "date": 24, "profit": 24, "revenue": 25, "freeCashFlow": 2 },
+                { "date": 25, "profit": 25, "revenue": 26, "freeCashFlow": 1 },
+                { "date": 26, "profit": 26, "revenue": 27, "freeCashFlow": 2 },
+                { "date": 27, "profit": 27, "revenue": 28, "freeCashFlow": 1 },
+                { "date": 28, "profit": 28, "revenue": 29, "freeCashFlow": 2 }
+            ]
+        },
+        {
+            "month": "September",
+            "days": [
+                { "date": 1, "profit": 1, "revenue": 2, "freeCashFlow": 0 },
+                { "date": 2, "profit": 2, "revenue": 3, "freeCashFlow": 1 },
+                { "date": 3, "profit": 3, "revenue": 4, "freeCashFlow": 1 },
+                { "date": 4, "profit": 4, "revenue": 5, "freeCashFlow": 2 },
+                { "date": 5, "profit": 5, "revenue": 6, "freeCashFlow": 1 },
+                { "date": 6, "profit": 6, "revenue": 7, "freeCashFlow": 2 },
+                { "date": 7, "profit": 7, "revenue": 8, "freeCashFlow": 1 },
+                { "date": 8, "profit": 8, "revenue": 9, "freeCashFlow": 2 },
+                { "date": 9, "profit": 9, "revenue": 10, "freeCashFlow": 1 },
+                { "date": 10, "profit": 10, "revenue": 11, "freeCashFlow": 2 },
+                { "date": 11, "profit": 11, "revenue": 12, "freeCashFlow": 1 },
+                { "date": 12, "profit": 12, "revenue": 13, "freeCashFlow": 2 },
+                { "date": 13, "profit": 13, "revenue": 14, "freeCashFlow": 1 },
+                { "date": 14, "profit": 14, "revenue": 15, "freeCashFlow": 2 },
+                { "date": 15, "profit": 15, "revenue": 16, "freeCashFlow": 1 },
+                { "date": 16, "profit": 16, "revenue": 17, "freeCashFlow": 2 },
+                { "date": 17, "profit": 17, "revenue": 18, "freeCashFlow": 1 },
+                { "date": 18, "profit": 18, "revenue": 19, "freeCashFlow": 2 },
+                { "date": 19, "profit": 19, "revenue": 20, "freeCashFlow": 1 },
+                { "date": 20, "profit": 20, "revenue": 21, "freeCashFlow": 2 },
+                { "date": 21, "profit": 21, "revenue": 22, "freeCashFlow": 1 },
+                { "date": 22, "profit": 22, "revenue": 23, "freeCashFlow": 2 },
+                { "date": 23, "profit": 23, "revenue": 24, "freeCashFlow": 1 },
+                { "date": 24, "profit": 24, "revenue": 25, "freeCashFlow": 2 },
+                { "date": 25, "profit": 25, "revenue": 26, "freeCashFlow": 1 },
+                { "date": 26, "profit": 26, "revenue": 27, "freeCashFlow": 2 },
+                { "date": 27, "profit": 27, "revenue": 28, "freeCashFlow": 1 },
+                { "date": 28, "profit": 28, "revenue": 29, "freeCashFlow": 2 }
+            ]
+        },
+        {
+            "month": "October",
+            "days": [
+                { "date": 1, "profit": 1, "revenue": 2, "freeCashFlow": 0 },
+                { "date": 2, "profit": 2, "revenue": 3, "freeCashFlow": 1 },
+                { "date": 3, "profit": 3, "revenue": 4, "freeCashFlow": 1 },
+                { "date": 4, "profit": 4, "revenue": 5, "freeCashFlow": 2 },
+                { "date": 5, "profit": 5, "revenue": 6, "freeCashFlow": 1 },
+                { "date": 6, "profit": 6, "revenue": 7, "freeCashFlow": 2 },
+                { "date": 7, "profit": 7, "revenue": 8, "freeCashFlow": 1 },
+                { "date": 8, "profit": 8, "revenue": 9, "freeCashFlow": 2 },
+                { "date": 9, "profit": 9, "revenue": 10, "freeCashFlow": 1 },
+                { "date": 10, "profit": 10, "revenue": 11, "freeCashFlow": 2 },
+                { "date": 11, "profit": 11, "revenue": 12, "freeCashFlow": 1 },
+                { "date": 12, "profit": 12, "revenue": 13, "freeCashFlow": 2 },
+                { "date": 13, "profit": 13, "revenue": 14, "freeCashFlow": 1 },
+                { "date": 14, "profit": 14, "revenue": 15, "freeCashFlow": 2 },
+                { "date": 15, "profit": 15, "revenue": 16, "freeCashFlow": 1 },
+                { "date": 16, "profit": 16, "revenue": 17, "freeCashFlow": 2 },
+                { "date": 17, "profit": 17, "revenue": 18, "freeCashFlow": 1 },
+                { "date": 18, "profit": 18, "revenue": 19, "freeCashFlow": 2 },
+                { "date": 19, "profit": 19, "revenue": 20, "freeCashFlow": 1 },
+                { "date": 20, "profit": 20, "revenue": 21, "freeCashFlow": 2 },
+                { "date": 21, "profit": 21, "revenue": 22, "freeCashFlow": 1 },
+                { "date": 22, "profit": 22, "revenue": 23, "freeCashFlow": 2 },
+                { "date": 23, "profit": 23, "revenue": 24, "freeCashFlow": 1 },
+                { "date": 24, "profit": 24, "revenue": 25, "freeCashFlow": 2 },
+                { "date": 25, "profit": 25, "revenue": 26, "freeCashFlow": 1 },
+                { "date": 26, "profit": 26, "revenue": 27, "freeCashFlow": 2 },
+                { "date": 27, "profit": 27, "revenue": 28, "freeCashFlow": 1 },
+                { "date": 28, "profit": 28, "revenue": 29, "freeCashFlow": 2 }
+            ]
+        }
+    ]
+}
 
 
 export const groupWiseData = {
@@ -306,62 +602,608 @@ export const groupWiseData = {
   
 }
 
-export const drilldownData = {
+
+export const drilldownDataMore = {
     year: {
-      2024: {
-        total: 1000,
-        months: {
-          Jan: {
-            total: 200,
-            weeks: {
-              "Week 1": {
-                total: 50,
-                days: {
-                  "2024-01-01": 10,
-                  "2024-01-02": 15,
-                  "2024-01-03": 25,
+        2024: {
+            total: 2400,
+            months: {
+                Jan: {
+                    total: 600,
+                    weeks: {
+                        "Week 1": {
+                            total: 150,
+                            days: {
+                                "2024-01-01": 40,
+                                "2024-01-02": 30,
+                                "2024-01-03": 20,
+                                "2024-01-04": 30,
+                                "2024-01-05": 30,
+                            },
+                        },
+                        "Week 2": {
+                            total: 180,
+                            days: {
+                                "2024-01-08": 40,
+                                "2024-01-09": 40,
+                                "2024-01-10": 30,
+                                "2024-01-11": 30,
+                                "2024-01-12": 40,
+                            },
+                        },
+                        "Week 3": {
+                            total: 270,
+                            days: {
+                                "2024-01-15": 60,
+                                "2024-01-16": 50,
+                                "2024-01-17": 60,
+                                "2024-01-18": 50,
+                                "2024-01-19": 50,
+                            },
+                        },
+                    },
                 },
-              },
-              "Week 2": {
-                total: 70,
-                days: {
-                  "2024-01-08": 30,
-                  "2024-01-09": 40,
+                Feb: {
+                    total: 800,
+                    weeks: {
+                        "Week 1": {
+                            total: 250,
+                            days: {
+                                "2024-02-01": 50,
+                                "2024-02-02": 60,
+                                "2024-02-03": 40,
+                                "2024-02-04": 50,
+                                "2024-02-05": 50,
+                            },
+                        },
+                        "Week 2": {
+                            total: 300,
+                            days: {
+                                "2024-02-06": 60,
+                                "2024-02-07": 60,
+                                "2024-02-08": 60,
+                                "2024-02-09": 60,
+                                "2024-02-10": 60,
+                            },
+                        },
+                        "Week 3": {
+                            total: 250,
+                            days: {
+                                "2024-02-11": 50,
+                                "2024-02-12": 50,
+                                "2024-02-13": 50,
+                                "2024-02-14": 50,
+                                "2024-02-15": 50,
+                            },
+                        },
+                    },
                 },
-              },
+                Mar: {
+                    total: 1000,
+                    weeks: {
+                        "Week 1": {
+                            total: 300,
+                            days: {
+                                "2024-03-01": 70,
+                                "2024-03-02": 60,
+                                "2024-03-03": 60,
+                                "2024-03-04": 60,
+                                "2024-03-05": 50,
+                            },
+                        },
+                        "Week 2": {
+                            total: 350,
+                            days: {
+                                "2024-03-06": 70,
+                                "2024-03-07": 70,
+                                "2024-03-08": 70,
+                                "2024-03-09": 70,
+                                "2024-03-10": 70,
+                            },
+                        },
+                        "Week 3": {
+                            total: 350,
+                            days: {
+                                "2024-03-11": 70,
+                                "2024-03-12": 70,
+                                "2024-03-13": 70,
+                                "2024-03-14": 70,
+                                "2024-03-15": 70,
+                            },
+                        },
+                    },
+                },
             },
-          },
-          Feb: {
-            total: 300,
-            weeks: {
-              "Week 1": {
-                total: 100,
-                days: {
-                  "2024-02-01": 60,
-                  "2024-02-02": 40,
-                },
-              },
-            },
-          },
         },
-      },
-      2023: {
-        total: 800,
-        months: {
-          Jan: {
-            total: 300,
-            weeks: {
-              "Week 1": {
-                total: 80,
-                days: {
-                  "2023-01-01": 30,
-                  "2023-01-02": 50,
+        2023: {
+            total: 1800,
+            months: {
+                Jan: {
+                    total: 600,
+                    weeks: {
+                        "Week 1": {
+                            total: 200,
+                            days: {
+                                "2023-01-01": 40,
+                                "2023-01-02": 40,
+                                "2023-01-03": 40,
+                                "2023-01-04": 40,
+                                "2023-01-05": 40,
+                            },
+                        },
+                        "Week 2": {
+                            total: 200,
+                            days: {
+                                "2023-01-06": 40,
+                                "2023-01-07": 40,
+                                "2023-01-08": 40,
+                                "2023-01-09": 40,
+                                "2023-01-10": 40,
+                            },
+                        },
+                        "Week 3": {
+                            total: 200,
+                            days: {
+                                "2023-01-11": 40,
+                                "2023-01-12": 40,
+                                "2023-01-13": 40,
+                                "2023-01-14": 40,
+                                "2023-01-15": 40,
+                            },
+                        },
+                    },
                 },
-              },
+                Feb: {
+                    total: 600,
+                    weeks: {
+                        "Week 1": {
+                            total: 300,
+                            days: {
+                                "2023-02-01": 60,
+                                "2023-02-02": 60,
+                                "2023-02-03": 60,
+                                "2023-02-04": 60,
+                                "2023-02-05": 60,
+                            },
+                        },
+                        "Week 2": {
+                            total: 300,
+                            days: {
+                                "2023-02-06": 60,
+                                "2023-02-07": 60,
+                                "2023-02-08": 60,
+                                "2023-02-09": 60,
+                                "2023-02-10": 60,
+                            },
+                        },
+                    },
+                },
+                Mar: {
+                    total: 600,
+                    weeks: {
+                        "Week 1": {
+                            total: 200,
+                            days: {
+                                "2023-03-01": 40,
+                                "2023-03-02": 40,
+                                "2023-03-03": 40,
+                                "2023-03-04": 40,
+                                "2023-03-05": 40,
+                            },
+                        },
+                        "Week 2": {
+                            total: 200,
+                            days: {
+                                "2023-03-06": 40,
+                                "2023-03-07": 40,
+                                "2023-03-08": 40,
+                                "2023-03-09": 40,
+                                "2023-03-10": 40,
+                            },
+                        },
+                        "Week 3": {
+                            total: 200,
+                            days: {
+                                "2023-03-11": 40,
+                                "2023-03-12": 40,
+                                "2023-03-13": 40,
+                                "2023-03-14": 40,
+                                "2023-03-15": 40,
+                            },
+                        },
+                    },
+                },
             },
-          },
         },
-      },
     },
-  };
-  
+};
+
+
+
+const hierarchicalData = {
+    2020: {
+        data: { netProfit: 2400, revenue: 100, freeCashFlow: 7 },
+        months: {
+            Jan: {
+                data: { netProfit: 200, revenue: 350, freeCashFlow: 150 },
+                weeks: {
+                    'W1': { days: { 'date': 2, 'date': 2, 'date': 2, "date": 20 } },
+                    'W2': { days: { 'date': 10, 'date': 5, 'date': 7 } },
+                    'W3': { days: { 'date': 6, 'date': 7, 'date': 5 } },
+                    'W4': { days: { 'date': 8, 'date': 7, 'date': 5 } }
+                },
+
+            },
+            Feb: {
+                data: { netProfit: 200, revenue: 350, freeCashFlow: 150 },
+                weeks: {
+                    'W1': { days: { '1': 7, '2': 8, '3': 9 } },
+                    'W2': { days: { '4': 6, '5': 7, '6': 8 } },
+                    'W3': { days: { '7': 5, '8': 6, '9': 7 } },
+                    'W4': { days: { '10': 8, '11': 9, '12': 10 } }
+                },
+                data: { netProfit: 2200, revenue: 370, freeCashFlow: 170 }
+            }
+            // Add more months as needed
+        },
+    },
+    2021: {
+        data: { netProfit: 2600, revenue: 4800, freeCashFlow: 1900 },
+        months: {
+            Jan: {
+                weeks: {
+                    'W1': { days: { '1': 10, '2': 12, '3': 11, '4': 13 } },
+                    'W2': { days: { '5': 14, '6': 12, '7': 15 } },
+                    'W3': { days: { '8': 9, '9': 10, '10': 11 } },
+                    'W4': { days: { '11': 13, '12': 15, '13': 14 } }
+                },
+                data: { netProfit: 250, revenue: 400, freeCashFlow: 200 }
+            },
+            Feb: {
+                weeks: {
+                    'W1': { days: { '1': 13, '2': 15, '3': 14 } },
+                    'W2': { days: { '4': 14, '5': 13, '6': 16 } },
+                    'W3': { days: { '7': 12, '8': 13, '9': 15 } },
+                    'W4': { days: { '10': 14, '11': 15, '12': 16 } }
+                },
+                data: { netProfit: 270, revenue: 430, freeCashFlow: 210 }
+            }
+            // Add more months as needed
+        },
+
+    },
+    // Add more years as needed
+};
+
+// const outPutFormat = {
+
+//     year: {
+//         data: {
+//             activity_type: count,// activity_type: count,  count is depending count of repeatition on this year wise, all months wise activity_type and repeatition as count
+//             activity_type: count,
+//         },
+//         month: {
+//             data:
+//             {
+//                 activity_type: count,// activity_type: count,  count is depending count of repeatition on this month wise all weak wise activity_type and repeatition as count
+//                 activity_type: count
+//             },
+
+//             weak: {
+//                 'W1': {
+//                     days: {
+//                         date: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         date: { activity_type: count },
+//                         date: { activity_type: count },
+//                         date: { activity_type: count }
+//                     }
+//                 },
+
+//                 'W2': {
+//                     days: {
+//                         date: { activity_type: count }, // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         date: { activity_type: count },
+//                         date: { activity_type: count },
+//                         date: { activity_type: count }
+//                     }
+//                 },
+
+//                 'W3': {
+//                     days: {
+//                         date: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         date: { activity_type: count },
+//                         date: { activity_type: count },
+//                         date: { activity_type: count }
+//                     }
+//                 },
+
+//                 'W4': {
+//                     days: {
+//                         date: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         date: { activity_type: count },
+//                         date: { activity_type: count },
+//                         date: { activity_type: count }
+//                     }
+//                 },
+//             },
+
+//         },
+//         month: {
+//             data:
+//             {
+//                 activity_type: count,// activity_type: count,  count is depending count of repeatition on this month wise all weak wise activity_type and repeatition as count
+//                 activity_type: count
+//             },
+
+//             weak: {
+//                 'W1': {
+//                     days: {
+//                         date: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         date: { activity_type: count },
+//                         date: { activity_type: count },
+//                         date: { activity_type: count }
+//                     }
+//                 },
+
+//                 'W2': {
+//                     days: {
+//                         date: { activity_type: count }, // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         date: { activity_type: count },
+//                         date: { activity_type: count },
+//                         date: { activity_type: count }
+//                     }
+//                 },
+
+//                 'W3': {
+//                     days: {
+//                         date: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         date: { activity_type: count },
+//                         date: { activity_type: count },
+//                         date: { activity_type: count }
+//                     }
+//                 },
+
+//                 'W4': {
+//                     days: {
+//                         date: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         date: { activity_type: count },
+//                         date: { activity_type: count },
+//                         date: { activity_type: count }
+//                     }
+//                 },
+//             },
+//         },
+//     }
+// }
+
+const outPut = {
+    "2024": {
+        "data": {
+            "enemy_orbat": 5,
+            "joint_exercise": 2,
+            "miscellaneous": 3,
+            "equipment": 4,
+            "dynamic_activity": 2,
+            "deployment": 2
+        },
+        "may": {
+            "data": {
+                "enemy_orbat": 3,
+                "equipment": 4,
+                "dynamic_activity": 2
+            },
+            "weak": {
+                "W1": {
+                    "days": {
+                        "5": {
+                            "dynamic_activity": 2
+                        },
+                        "6": {
+                            "enemy_orbat": 3
+                        }
+                    }
+                },
+                "W3": {
+                    "days": {
+                        "16": {
+                            "equipment": 2
+                        },
+                        "17": {
+                            "equipment": 2
+                        }
+                    }
+                }
+            }
+        },
+        "march": {
+            "data": {
+                "joint_exercise": 2,
+                "enemy_orbat": 2,
+                "miscellaneous": 3
+            },
+            "weak": {
+                "W2": {
+                    "days": {
+                        "8": {
+                            "joint_exercise": 2
+                        }
+                    }
+                },
+                "W3": {
+                    "days": {
+                        "19": {
+                            "enemy_orbat": 2
+                        },
+                        "20": {
+                            "miscellaneous": 1
+                        }
+                    }
+                },
+                "W4": {
+                    "days": {
+                        "23": {
+                            "miscellaneous": 2
+                        }
+                    }
+                }
+            }
+        },
+        "april": {
+            "data": {
+                "deployment": 2
+            },
+            "weak": {
+                "W3": {
+                    "days": {
+                        "21": {
+                            "deployment": 2
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "2025": {
+        "data": {
+            "enemy_orbat": 5,
+            "joint_exercise": 2,
+            "miscellaneous": 5,
+            "equipment": 4,
+            "dynamic_activity": 2,
+            "deployment": 2
+        },
+        "may": {
+            "data": {
+                "enemy_orbat": 3,
+                "equipment": 4,
+                "dynamic_activity": 2
+            },
+            "weak": {
+                "W1": {
+                    "days": {
+                        "5": {
+                            "dynamic_activity": 2
+                        },
+                        "6": {
+                            "enemy_orbat": 3
+                        }
+                    }
+                },
+                "W3": {
+                    "days": {
+                        "16": {
+                            "equipment": 2
+                        },
+                        "17": {
+                            "equipment": 2
+                        }
+                    }
+                }
+            }
+        },
+        "march": {
+            "data": {
+                "joint_exercise": 2,
+                "enemy_orbat": 2,
+                "miscellaneous": 5
+            },
+            "weak": {
+                "W2": {
+                    "days": {
+                        "8": {
+                            "joint_exercise": 2
+                        }
+                    }
+                },
+                "W3": {
+                    "days": {
+                        "19": {
+                            "enemy_orbat": 2
+                        },
+                        "20": {
+                            "miscellaneous": 3
+                        }
+                    }
+                },
+                "W4": {
+                    "days": {
+                        "23": {
+                            "miscellaneous": 2
+                        }
+                    }
+                }
+            }
+        },
+        "april": {
+            "data": {
+                "deployment": 2
+            },
+            "weak": {
+                "W3": {
+                    "days": {
+                        "21": {
+                            "deployment": 2
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+export function groupActivities(data) {
+    const output = {};
+
+    data.forEach(item => {
+        const date = new Date(item.created_date);
+        const year = date.getFullYear();
+        const month = date.toLocaleString('default', { month: 'long' }).toLowerCase(); // e.g., "march"
+        const week = `W${Math.ceil(date.getDate() / 7)}`; // Calculate week number
+        const day = date.getDate();
+
+        // Initialize year object
+        if (!output[year]) {
+            output[year] = {
+                data: {},
+                [month]: {
+                    data: {},
+                    weak: {}
+                }
+            };
+        }
+
+        // Initialize month object
+        if (!output[year][month]) {
+            output[year][month] = {
+                data: {},
+                weak: {}
+            };
+        }
+
+        // Initialize week object
+        if (!output[year][month].weak[week]) {
+            output[year][month].weak[week] = {
+                days: {}
+            };
+        }
+
+        // Initialize day object
+        if (!output[year][month].weak[week].days[day]) {
+            output[year][month].weak[week].days[day] = {};
+        }
+
+        // Count activity_type for year
+        output[year].data[item.activity_type] = (output[year].data[item.activity_type] || 0) + 1;
+
+        // Count activity_type for month
+        output[year][month].data[item.activity_type] = (output[year][month].data[item.activity_type] || 0) + 1;
+
+        // Count activity_type for week
+        output[year][month].weak[week].days[day][item.activity_type] = (output[year][month].weak[week].days[day][item.activity_type] || 0) + 1;
+    });
+
+    return output;
+}
+
+
