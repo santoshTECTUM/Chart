@@ -6,6 +6,11 @@ export const realInput = [
     },
     {
 
+        "activity_type": "enemy_orbat",
+        "created_date": "2025-05-05T10:12:55.848392",
+    },
+    {
+
         "activity_type": "joint_exercise",
         "created_date": "2025-03-08T14:13:11Z",
 
@@ -48,6 +53,10 @@ export const realInput = [
         "activity_type": "deployment",
         "created_date": "2025-04-21T17:46:15Z",
 
+    }, {
+        "activity_type": "deployment",
+        "created_date": "2025-04-20T17:46:15Z",
+
     },
     {
         "activity_type": "joint_exercise",
@@ -92,8 +101,6 @@ export const realInput = [
         "created_date": "2025-04-21T17:46:15Z",
 
     },
-
-
     {
 
         "activity_type": "enemy_orbat",
@@ -142,6 +149,10 @@ export const realInput = [
     {
         "activity_type": "deployment",
         "created_date": "2024-04-21T17:46:15Z",
+
+    }, {
+        "activity_type": "deployment",
+        "created_date": "2024-04-20T17:46:15Z",
 
     },
     {
@@ -188,6 +199,103 @@ export const realInput = [
 
     },
 
+    {
+
+        "activity_type": "enemy_orbat",
+        "created_date": "2023-05-06T10:12:55.848392",
+    },
+    {
+
+        "activity_type": "joint_exercise",
+        "created_date": "2023-03-08T14:13:11Z",
+
+    },
+    {
+        "activity_type": "enemy_orbat",
+        "created_date": "2023-05-06T10:12:55.848392",
+
+    },
+    {
+        "activity_type": "enemy_orbat",
+        "created_date": "2023-03-19T18:11:39Z"
+    },
+    {
+
+        "activity_type": "miscellaneous",
+        "created_date": "2023-03-23T10:31:58Z",
+
+    },
+    {
+        "activity_type": "miscellaneous",
+        "created_date": "2023-03-20T10:58:52Z",
+
+    },
+    {
+        "activity_type": "equipment",
+        "created_date": "2023-05-17T07:28:50.969698"
+    },
+    {
+        "activity_type": "equipment",
+        "created_date": "2023-05-16T13:29:45.798190",
+
+    },
+    {
+        "activity_type": "dynamic_activity",
+        "created_date": "2023-05-05T09:58:03.190653",
+
+    },
+    {
+        "activity_type": "deployment",
+        "created_date": "2023-04-21T17:46:15Z",
+
+    }, {
+        "activity_type": "deployment",
+        "created_date": "2023-04-20T17:46:15Z",
+
+    },
+    {
+        "activity_type": "joint_exercise",
+        "created_date": "2023-03-08T14:13:11Z",
+
+    },
+    {
+        "activity_type": "enemy_orbat",
+        "created_date": "2023-05-06T10:12:55.848392",
+
+    },
+    {
+        "activity_type": "enemy_orbat",
+        "created_date": "2023-03-19T18:11:39Z"
+    },
+    {
+        "activity_type": "miscellaneous",
+        "created_date": "2023-03-23T10:31:58Z",
+
+    },
+    {
+        "activity_type": "miscellaneous",
+        "created_date": "2023-03-20T10:58:52Z",
+
+    },
+    {
+        "activity_type": "equipment",
+        "created_date": "2023-05-17T07:28:50.969698"
+    },
+    {
+        "activity_type": "equipment",
+        "created_date": "2023-05-16T13:29:45.798190",
+
+    },
+    {
+        "activity_type": "dynamic_activity",
+        "created_date": "2023-05-05T09:58:03.190653",
+
+    },
+    {
+        "activity_type": "deployment",
+        "created_date": "2023-04-21T17:46:15Z",
+
+    },
 
 
 ]
@@ -876,7 +984,6 @@ const hierarchicalData = {
 };
 
 // const outPutFormat = {
-
 //     year: {
 //         data: {
 //             activity_type: count,// activity_type: count,  count is depending count of repeatition on this year wise, all months wise activity_type and repeatition as count
@@ -888,45 +995,40 @@ const hierarchicalData = {
 //                 activity_type: count,// activity_type: count,  count is depending count of repeatition on this month wise all weak wise activity_type and repeatition as count
 //                 activity_type: count
 //             },
-
 //             weak: {
 //                 'W1': {
 //                     days: {
-//                         date: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
-//                         date: { activity_type: count },
-//                         date: { activity_type: count },
-//                         date: { activity_type: count }
+//                         fulldate: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count }
 //                     }
 //                 },
-
 //                 'W2': {
 //                     days: {
-//                         date: { activity_type: count }, // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
-//                         date: { activity_type: count },
-//                         date: { activity_type: count },
-//                         date: { activity_type: count }
+//                         fulldate: { activity_type: count }, // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count }
 //                     }
 //                 },
-
 //                 'W3': {
 //                     days: {
-//                         date: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
-//                         date: { activity_type: count },
-//                         date: { activity_type: count },
-//                         date: { activity_type: count }
+//                         fulldate: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count }
 //                     }
 //                 },
-
 //                 'W4': {
 //                     days: {
-//                         date: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
-//                         date: { activity_type: count },
-//                         date: { activity_type: count },
-//                         date: { activity_type: count }
+//                         fulldate: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count }
 //                     }
 //                 },
 //             },
-
 //         },
 //         month: {
 //             data:
@@ -938,37 +1040,37 @@ const hierarchicalData = {
 //             weak: {
 //                 'W1': {
 //                     days: {
-//                         date: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
-//                         date: { activity_type: count },
-//                         date: { activity_type: count },
-//                         date: { activity_type: count }
+//                         fulldate: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count }
 //                     }
 //                 },
 
 //                 'W2': {
 //                     days: {
-//                         date: { activity_type: count }, // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
-//                         date: { activity_type: count },
-//                         date: { activity_type: count },
-//                         date: { activity_type: count }
+//                         fulldate: { activity_type: count }, // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count }
 //                     }
 //                 },
 
 //                 'W3': {
 //                     days: {
-//                         date: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
-//                         date: { activity_type: count },
-//                         date: { activity_type: count },
-//                         date: { activity_type: count }
+//                         fulldate: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count }
 //                     }
 //                 },
 
 //                 'W4': {
 //                     days: {
-//                         date: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
-//                         date: { activity_type: count },
-//                         date: { activity_type: count },
-//                         date: { activity_type: count }
+//                         fulldate: { activity_type: count },  // activity_type: count,  count is depending count of repeatition on this date wise all date wise activity_type and repeatition as count
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count },
+//                         fulldate: { activity_type: count }
 //                     }
 //                 },
 //             },
@@ -1152,7 +1254,117 @@ const outPut = {
 }
 
 
-export function groupActivities(data) {
+export function groupActivitiesFullDateSorted(data) {
+    const output = {};
+  
+    data.forEach(item => {
+      const date = new Date(item.created_date);
+      const year = date.getFullYear();
+      const month = date.toLocaleString('default', { month: 'long' }).toLowerCase(); // e.g., "march"
+      const week = `W${Math.ceil(date.getDate() / 7)}`; // Calculate week number
+      const fullDate = date.toISOString().split('T')[0]; // Format date as YYYY-MM-DD
+  
+      // Initialize year object
+      if (!output[year]) {
+        output[year] = { data: {}, };
+      }
+  
+      // Initialize month object
+      if (!output[year][month]) {
+        output[year][month] = { data: {}, weak: {} };
+      }
+  
+      // Initialize week object
+      if (!output[year][month].weak[week]) {
+        output[year][month].weak[week] = { days: {} };
+      }
+  
+      // Initialize day object
+      if (!output[year][month].weak[week].days[fullDate]) {
+        output[year][month].weak[week].days[fullDate] = {};
+      }
+  
+      // Count activity_type for year
+      output[year].data[item.activity_type] = (output[year].data[item.activity_type] || 0) + 1;
+  
+      // Count activity_type for month
+      output[year][month].data[item.activity_type] = (output[year][month].data[item.activity_type] || 0) + 1;
+  
+      // Count activity_type for week and day
+      output[year][month].weak[week].days[fullDate][item.activity_type] = (output[year][month].weak[week].days[fullDate][item.activity_type] || 0) + 1;
+    });
+  
+    // Helper: sum all activity counts (all activity_type counts) in a node's data object
+    function sumActivitiesCount(dataObj) {
+      if (!dataObj) return 0;
+      let sum = 0;
+      for (const key in dataObj) {
+        if (typeof dataObj[key] === 'number') {
+          sum += dataObj[key];
+        }
+      }
+      return sum;
+    }
+  
+    // Recursive sorting function for output object at all levels
+    function sortOutputRecursively(obj) {
+      if (typeof obj !== 'object' || obj === null) return obj;
+  
+      // Sort keys based on total counts descending
+      const keys = Object.keys(obj);
+  
+      // Separate data key (if any)
+      const dataKeyIndex = keys.indexOf('data');
+      let dataKey;
+      if (dataKeyIndex !== -1) {
+        dataKey = keys.splice(dataKeyIndex, 1)[0];
+      }
+  
+      // For weeks and days levels names start with W or date strings
+      // For months we have month names
+      // For years numeric keys
+  
+      // Prepare entries to sort
+      const entriesToSort = keys.map(key => {
+        const child = obj[key];
+        // Sum counts for this child node:
+        // If has 'data', sum that, else if it's days object sum all days activities
+        let totalCount = 0;
+  
+        if (child && child.data) {
+          totalCount = sumActivitiesCount(child.data);
+        } else if (child && child.days) {
+          // Sum all counts in all days
+          totalCount = Object.values(child.days).reduce((acc, dayAct) => acc + sumActivitiesCount(dayAct), 0);
+        } else if (typeof child === 'object') {
+          totalCount = sumActivitiesCount(child); // fallback in case of plain object with activity counts
+        }
+        return { key, totalCount, child };
+      });
+  
+      // Sort entries descending by count
+      entriesToSort.sort((a, b) => b.totalCount - a.totalCount);
+  
+      // Rebuild sorted object with 'data' key first (if any)
+      const sortedObj = {};
+      if (dataKey) {
+        sortedObj[dataKey] = obj[dataKey];
+      }
+      for (const { key, child } of entriesToSort) {
+        // Recursively sort children except for 'data'
+        sortedObj[key] = (key === 'data') ? obj[key] : sortOutputRecursively(child);
+      }
+  
+      return sortedObj;
+    }
+  
+    const sortedOutput = sortOutputRecursively(output);
+  
+    return sortedOutput;
+  }
+  
+
+export function groupActivitiesFullDate(data) {
     const output = {};
 
     data.forEach(item => {
@@ -1160,7 +1372,7 @@ export function groupActivities(data) {
         const year = date.getFullYear();
         const month = date.toLocaleString('default', { month: 'long' }).toLowerCase(); // e.g., "march"
         const week = `W${Math.ceil(date.getDate() / 7)}`; // Calculate week number
-        const day = date.getDate();
+        const fullDate = date.toISOString().split('T')[0]; // Format date as YYYY-MM-DD
 
         // Initialize year object
         if (!output[year]) {
@@ -1188,9 +1400,9 @@ export function groupActivities(data) {
             };
         }
 
-        // Initialize day object
-        if (!output[year][month].weak[week].days[day]) {
-            output[year][month].weak[week].days[day] = {};
+        // Initialize day object with full date
+        if (!output[year][month].weak[week].days[fullDate]) {
+            output[year][month].weak[week].days[fullDate] = {};
         }
 
         // Count activity_type for year
@@ -1199,11 +1411,15 @@ export function groupActivities(data) {
         // Count activity_type for month
         output[year][month].data[item.activity_type] = (output[year][month].data[item.activity_type] || 0) + 1;
 
-        // Count activity_type for week
-        output[year][month].weak[week].days[day][item.activity_type] = (output[year][month].weak[week].days[day][item.activity_type] || 0) + 1;
+        // Count activity_type for week using full date
+        output[year][month].weak[week].days[fullDate][item.activity_type] = (output[year][month].weak[week].days[fullDate][item.activity_type] || 0) + 1;
     });
 
     return output;
 }
+
+// const groupedData = groupActivitiesFullDate(realInput);
+// console.log(JSON.stringify(groupedData, null, 2));
+
 
 

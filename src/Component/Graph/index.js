@@ -1,318 +1,420 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useMemo } from 'react';
 import ApexChart from 'react-apexcharts';
-import { groupActivities } from '../inputDemo';
-import { realInput } from '../inputDemo';
-const hierarchicalData = {
-  2020: {
-    data: { netProfit: 2400, revenue: 100, freeCashFlow: 7 },
-    months: {
-      Jan: {
-        weeks: {
-          'W1': { days: { 'a': 2, 'b': 2, 'c': 2, "d":20} },
-          'W2': { days: { 'a': 10, 'b': 5, 'c': 7 } },
-          'W3': { days: { 'a': 6, 'b': 7, 'c': 5 } },
-          'W4': { days: { 'a': 8, 'b': 7, 'c': 5 } }
-        },
-        data: { netProfit: 200, revenue: 350, freeCashFlow: 150 }
-      },
-      Feb: {
-        weeks: {
-          'W1': { days: { '1': 7, '2': 8, '3': 9 } },
-          'W2': { days: { '4': 6, '5': 7, '6': 8 } },
-          'W3': { days: { '7': 5, '8': 6, '9': 7 } },
-          'W4': { days: { '10': 8, '11': 9, '12': 10 } }
-        },
-        data: { netProfit: 2200, revenue: 370, freeCashFlow: 170 }
-      }
-      // Add more months as needed
+import { groupActivities, groupActivitiesFullDate, groupActivitiesFullDateSorted, realInput } from '../inputDemo';
+
+const inputData = {
+  "2024": {
+    "data": {
+      "enemy_orbat": 5,
+      "joint_exercise": 2,
+      "miscellaneous": 3,
+      "equipment": 4,
+      "dynamic_activity": 2,
+      "deployment": 2
     },
-  },
-  2021: {
-    data: { netProfit: 2600, revenue: 4800, freeCashFlow: 1900 },
-    months: {
-      Jan: {
-        weeks: {
-          'W1': { days: { '1': 10, '2': 12, '3': 11, '4': 13 } },
-          'W2': { days: { '5': 14, '6': 12, '7': 15 } },
-          'W3': { days: { '8': 9, '9': 10, '10': 11 } },
-          'W4': { days: { '11': 13, '12': 15, '13': 14 } }
-        },
-        data: { netProfit: 250, revenue: 400, freeCashFlow: 200 }
+    "may": {
+      "data": {
+        "enemy_orbat": 3,
+        "equipment": 4,
+        "dynamic_activity": 2
       },
-      Feb: {
-        weeks: {
-          'W1': { days: { '1': 13, '2': 15, '3': 14 } },
-          'W2': { days: { '4': 14, '5': 13, '6': 16 } },
-          'W3': { days: { '7': 12, '8': 13, '9': 15 } },
-          'W4': { days: { '10': 14, '11': 15, '12': 16 } }
-        },
-        data: { netProfit: 270, revenue: 430, freeCashFlow: 210 }
-      }
-      // Add more months as needed
-    },
-   
-  },
-  // Add more years as needed
-};
-
-const aggregateYearData = (dataObj) => {
-  // Aggregate year level data from months if not present explicitly
-  // In this example data, year data is precomputed, so just reading it.
-  return {
-    netProfit: dataObj.data.netProfit,
-    revenue: dataObj.data.revenue,
-    freeCashFlow: dataObj.data.freeCashFlow,
-  };
-};
-
-const aggregateMonthData = (months) => {
-  const netProfit = [];
-  const revenue = [];
-  const freeCashFlow = [];
-  const categories = Object.keys(months);
-  for (let month of categories) {
-    netProfit.push(months[month].data.netProfit);
-    revenue.push(months[month].data.revenue);
-    freeCashFlow.push(months[month].data.freeCashFlow);
-  }
-  return { netProfit, revenue, freeCashFlow, categories };
-};
-
-const aggregateWeekData = (weeks) => {
-  const netProfit = [];
-  const revenue = []; // For weeks revenue data is not given. We can simulate or ignore.
-  const freeCashFlow = [];
-  const categories = Object.keys(weeks);
-  for (let week of categories) {
-    // Aggregate week data by summing days for example
-    const days = weeks[week].days;
-    // Sum day data for each metric separately, but we only have day values (assuming netProfit)
-    // For simplicity, consider day values as only netProfit, generate mock revenue and cashFlow by proportions
-    const netProfitSum = Object.values(days).reduce((a, b) => a + b, 0);
-    netProfit.push(netProfitSum);
-    revenue.push(Math.round(netProfitSum * 1.7)); // approximate revenue
-    freeCashFlow.push(Math.round(netProfitSum * 0.6)); // approximate cashflow
-  }
-  return { netProfit, revenue, freeCashFlow, categories };
-};
-
-const aggregateDayData = (days) => {
-  const netProfit = [];
-  const revenue = [];
-  const freeCashFlow = [];
-  const categories = Object.keys(days);
-  for (let day of categories) {
-    const val = days[day];
-    netProfit.push(val);
-    revenue.push(Math.round(val * 1.7));
-    freeCashFlow.push(Math.round(val * 0.6));
-  }
-  return { netProfit, revenue, freeCashFlow, categories };
-};
-
-const prepareSeriesAndOptions = (netProfit, revenue, freeCashFlow, categories) => {
-  return {
-    series: [
-      { name: ' Profit', data: netProfit },
-      { name: 'Revenue', data: revenue },
-      { name: 'Free Cash Flow', data: freeCashFlow },
-    ],
-    options: {
-      chart: {
-        type: 'bar',
-        height: 400,
-        background: '#fff',
-        events: {
-          dataPointSelection: (event, chartContext, config) => {
-            // This will be handled in React component event handler
-          },
-        },
-      },
-      plotOptions: {
-        bar: {
-          horizontal: false,
-          columnWidth: '60%',
-          borderRadius: 5,
-          borderRadiusApplication: 'end',
-        },
-      },
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        show: true,
-        width: 2,
-        colors: ['transparent'],
-      },
-      xaxis: {
-        categories,
-      },
-      yaxis: {
-        title: {
-          text: '(Count)',
-        },
-      },
-      fill: {
-        opacity: 1,
-      },
-      tooltip: {
-        y: {
-          formatter: (val) => "" + val,
-        },
-      },
-      legend: {
-        position: 'top',
-        horizontalAlign: 'center',
-      },
-      responsive: [{
-        breakpoint: 600,
-        options: {
-          chart: { height: 320 },
-          plotOptions: { bar: { columnWidth: '80%' } },
-        },
-      }],
-    },
-  };
-};
-
-const Graph = () => {
-  // Track drill level: 'year' | 'month' | 'week' | 'day'
-  const [drillLevel, setDrillLevel] = useState('year');
-
-  const [selectedYear, setSelectedYear] = useState(null);
-  const [selectedMonth, setSelectedMonth] = useState(null);
-  const [selectedWeek, setSelectedWeek] = useState(null);
-  const groupedOutput = groupActivities(realInput);
-  // Helper to get chart data based on current drill level and selected hierarchy
-  const getChartData = useCallback(() => {
-    if (drillLevel === 'year') {
-      // Aggregate year level data from hierarchicalData
-      const years = Object.keys(hierarchicalData);
-      console.log(typeof years,years);
-      
-      const netProfit = [];
-      const revenue = [];
-      const freeCashFlow = [];
-      for (let year of years) {
-        const yrData = aggregateYearData(hierarchicalData[year]);
-        netProfit.push(yrData.netProfit);
-        revenue.push(yrData.revenue);
-        freeCashFlow.push(yrData.freeCashFlow);
-      }
-      return prepareSeriesAndOptions(netProfit, revenue, freeCashFlow, years);
-    }
-    else if (drillLevel === 'month' && selectedYear) {
-      const monthsData = hierarchicalData[selectedYear]?.months;
-      if (!monthsData) return null;
-      const { netProfit, revenue, freeCashFlow, categories } = aggregateMonthData(monthsData);
-      return prepareSeriesAndOptions(netProfit, revenue, freeCashFlow, categories);
-    }
-    else if (drillLevel === 'week' && selectedYear && selectedMonth) {
-      const weeksData = hierarchicalData[selectedYear]?.months[selectedMonth]?.weeks;
-      if (!weeksData) return null;
-      const { netProfit, revenue, freeCashFlow, categories } = aggregateWeekData(weeksData);
-      return prepareSeriesAndOptions(netProfit, revenue, freeCashFlow, categories);
-    }
-    else if (drillLevel === 'day' && selectedYear && selectedMonth && selectedWeek) {
-      const daysData = hierarchicalData[selectedYear]?.months[selectedMonth]?.weeks[selectedWeek]?.days;
-      if (!daysData) return null;
-      const { netProfit, revenue, freeCashFlow, categories } = aggregateDayData(daysData);
-      return prepareSeriesAndOptions(netProfit, revenue, freeCashFlow, categories);
-    }
-    return null;
-  }, [drillLevel, selectedYear, selectedMonth, selectedWeek]);
-
-  const chartData = getChartData();
-
-  // Handling bar click - drill down
-  const handleDataPointSelection = (event, chartContext, config) => {
-    if (!config.w || config.w.config.xaxis.categories.length === 0) return;
-    const clickedIndex = config.dataPointIndex;
-    const clickedCategory = config.w.config.xaxis.categories[clickedIndex];
-
-    if (drillLevel === 'year') {
-      setSelectedYear(clickedCategory);
-      setDrillLevel('month');
-      setSelectedMonth(null);
-      setSelectedWeek(null);
-    } else if (drillLevel === 'month') {
-      setSelectedMonth(clickedCategory);
-      setDrillLevel('week');
-      setSelectedWeek(null);
-    } else if (drillLevel === 'week') {
-      setSelectedWeek(clickedCategory);
-      setDrillLevel('day');
-    }
-    // at day level do nothing on click (or alternatively reset)
-  };
-
-  // Handle going back up one level
-  const handleDrillUp = () => {
-    if (drillLevel === 'day') {
-      setDrillLevel('week');
-      setSelectedWeek(null);
-    } else if (drillLevel === 'week') {
-      setDrillLevel('month');
-      setSelectedMonth(null);
-    } else if (drillLevel === 'month') {
-      setDrillLevel('year');
-      setSelectedYear(null);
-    }
-  };
-
-  if (!chartData) {
-    return <div>No data available for selected selection.</div>;
-  }
-
-
-  console.log(JSON.stringify(groupedOutput, null, 2));
-  return (
-    <div style={{ maxWidth: '900px', margin: 'auto', fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" }}>
-      <h2 style={{ textAlign: 'center', color: '#34495e', marginBottom: 20 }}>
-        Drill-down Bar Chart - {drillLevel.charAt(0).toUpperCase() + drillLevel.slice(1)} Level
-      </h2>
-
-      {/* Breadcrumb/Path info and Back button */}
-      <div style={{ marginBottom: 20, fontSize: 16 }}>
-        <button
-          onClick={handleDrillUp}
-          disabled={drillLevel === 'year'}
-          style={{
-            padding: '6px 12px',
-            borderRadius: '4px',
-            border: 'none',
-            backgroundColor: drillLevel === 'year' ? '#ccc' : '#3498db',
-            color: '#fff',
-            cursor: drillLevel === 'year' ? 'not-allowed' : 'pointer',
-            marginRight: 10,
-          }}>
-          Back
-        </button>
-        Path:
-        {' '}
-        <strong>{selectedYear || 'All Years'}</strong>
-        {selectedMonth && <> &gt; <strong>{selectedMonth}</strong></>}
-        {selectedWeek && <> &gt; <strong>{selectedWeek}</strong></>}
-      </div>
-
-      <ApexChart
-        options={{
-          ...chartData.options,
-          chart: {
-            ...chartData.options.chart,
-            events: {
-              dataPointSelection: handleDataPointSelection,
+      "weak": {
+        "W1": {
+          "days": {
+            "5": {
+              "dynamic_activity": 2
             },
-          },
-        }}
-        series={chartData.series}
+            "6": {
+              "enemy_orbat": 3
+            }
+          }
+        },
+        "W3": {
+          "days": {
+            "16": {
+              "equipment": 2
+            },
+            "17": {
+              "equipment": 2
+            }
+          }
+        }
+      }
+    },
+    "march": {
+      "data": {
+        "joint_exercise": 2,
+        "enemy_orbat": 2,
+        "miscellaneous": 3
+      },
+      "weak": {
+        "W2": {
+          "days": {
+            "8": {
+              "joint_exercise": 2
+            }
+          }
+        },
+        "W3": {
+          "days": {
+            "19": {
+              "enemy_orbat": 2
+            },
+            "20": {
+              "miscellaneous": 1
+            }
+          }
+        },
+        "W4": {
+          "days": {
+            "23": {
+              "miscellaneous": 2
+            }
+          }
+        }
+      }
+    },
+    "april": {
+      "data": {
+        "deployment": 2
+      },
+      "weak": {
+        "W3": {
+          "days": {
+            "21": {
+              "deployment": 2
+            }
+          }
+        }
+      }
+    }
+  },
+  "2025": {
+    "data": {
+      "enemy_orbat": 5,
+      "joint_exercise": 2,
+      "miscellaneous": 5,
+      "equipment": 4,
+      "dynamic_activity": 2,
+      "deployment": 2
+    },
+    "may": {
+      "data": {
+        "enemy_orbat": 3,
+        "equipment": 4,
+        "dynamic_activity": 2
+      },
+      "weak": {
+        "W1": {
+          "days": {
+            "5": {
+              "dynamic_activity": 2
+            },
+            "6": {
+              "enemy_orbat": 3
+            }
+          }
+        },
+        "W3": {
+          "days": {
+            "16": {
+              "equipment": 2
+            },
+            "17": {
+              "equipment": 2
+            }
+          }
+        }
+      }
+    },
+    "march": {
+      "data": {
+        "joint_exercise": 2,
+        "enemy_orbat": 2,
+        "miscellaneous": 5
+      },
+      "weak": {
+        "W2": {
+          "days": {
+            "8": {
+              "joint_exercise": 2
+            }
+          }
+        },
+        "W3": {
+          "days": {
+            "19": {
+              "enemy_orbat": 2
+            },
+            "20": {
+              "miscellaneous": 3
+            }
+          }
+        },
+        "W4": {
+          "days": {
+            "23": {
+              "miscellaneous": 2
+            }
+          }
+        }
+      }
+    },
+    "april": {
+      "data": {
+        "deployment": 2
+      },
+      "weak": {
+        "W3": {
+          "days": {
+            "21": {
+              "deployment": 2
+            }
+          }
+        }
+      }
+    }
+  }
+};
+
+// Helper to get all unique activity types recursively in dataset
+function getAllActivityTypes(data) {
+  const activities = new Set();
+
+  function recurse(obj) {
+    if (obj && typeof obj === 'object') {
+      if (obj.data) {
+        Object.keys(obj.data).forEach(act => activities.add(act));
+      }
+      if (obj.weak) {
+        Object.values(obj.weak).forEach(wk => {
+          if (wk.days) {
+            Object.values(wk.days).forEach(dayObj => {
+              Object.keys(dayObj).forEach(act => activities.add(act));
+            });
+          }
+        });
+      }
+      // recurse all children keys except 'data' and 'weak'
+      Object.entries(obj).forEach(([k,v]) => {
+        if (k !== 'data' && k !== 'weak') {
+          recurse(v);
+        }
+      });
+    }
+  }
+
+  recurse(data);
+  return Array.from(activities);
+}
+const groupedFormation = await groupActivitiesFullDateSorted(realInput)
+console.log(groupedFormation);
+
+const activityTypes = getAllActivityTypes(groupedFormation);
+
+// Helper to construct series data for chart given data slice and activities
+function buildSeriesFromData(dataObj, activities) {
+  // dataObj is expected to have `data` key or be a mapping of activity counts
+  const result = activities.map(activity => {
+    const count = dataObj?.data?.[activity] ?? (dataObj?.[activity] ?? 0);
+    return count;
+  });
+  return result;
+}
+
+// Main component
+export default function Graph() {
+  // State for drill down: level ('year','month','week','day') and selected keys along the drill path
+  const [drill, setDrill] = useState({
+    level: 'year',
+    year: null,
+    month: null,
+    week: null
+  });
+
+  // Helper: get keys like years, months, weeks, days for category axis depending on level
+  function getCategories(level, context) {
+    if (level === 'year') {
+      return Object.keys(groupedFormation).sort();
+    }
+    if (level === 'month') {
+      const months = groupedFormation[context.year];
+      if (!months) return [];
+      return Object.keys(months)
+        .filter(k => k !== 'data' && k !== 'weak')
+        .sort((a,b) => new Date(`${a} 1, 2000`) - new Date(`${b} 1, 2000`));
+    }
+    if (level === 'week') {
+      const weeks = groupedFormation[context.year]?.[context.month]?.weak;
+      if (!weeks) return [];
+      return Object.keys(weeks).sort();
+    }
+    if (level === 'day') {
+      const daysObj = groupedFormation[context.year]?.[context.month]?.weak?.[context.week]?.days;
+      if (!daysObj) return [];
+      // Day keys as numbers sorted
+      return Object.keys(daysObj).sort((a,b) => parseInt(a) - parseInt(b));
+    }
+    return [];
+  }
+
+  // Build series data for current drill level and context
+  function buildSeries(level, context) {
+    const categories = getCategories(level, context);
+    const series = activityTypes.map(activity => {
+      const data = categories.map(cat => {
+        // Depending on level, look up counts
+        switch (level) {
+          case 'year':
+            return groupedFormation[cat]?.data?.[activity] ?? 0;
+          case 'month':
+            return groupedFormation[context.year]?.[cat]?.data?.[activity] ?? 0;
+          case 'week':
+            return groupedFormation[context.year]?.[context.month]?.weak?.[cat]?.days
+              ? Object.values(groupedFormation[context.year][context.month].weak[cat].days).reduce((acc, dayObj) => acc + (dayObj[activity] ?? 0), 0)
+              : 0;
+          case 'day':
+            return groupedFormation[context.year]?.[context.month]?.weak?.[context.week]?.days?.[cat]?.[activity] ?? 0;
+          default:
+            return 0;
+        }
+      });
+      return {
+        name: activity,
+        data
+      };
+    });
+    return series;
+  }
+
+  // Current categories and series for the chart depending on drill state
+  const categories = useMemo(() => {
+    return getCategories(drill.level, drill);
+  }, [drill]);
+
+  const series = useMemo(() => {
+    return buildSeries(drill.level, drill);
+  }, [drill]);
+
+  // Handle clicking on a bar to drill down deeper
+  function handleDataPointSelection(event, chartContext, config) {
+    const pointIndex = config.dataPointIndex;
+    if (pointIndex === -1) return; // no selection
+    if (drill.level === 'year') {
+      const selectedYear = categories[pointIndex];
+      setDrill({ level: 'month', year: selectedYear, month: null, week: null });
+    } else if (drill.level === 'month') {
+      const selectedMonth = categories[pointIndex];
+      setDrill({ level: 'week', year: drill.year, month: selectedMonth, week: null });
+    } else if (drill.level === 'week') {
+      const selectedWeek = categories[pointIndex];
+      setDrill({ level: 'day', year: drill.year, month: drill.month, week: selectedWeek });
+    }
+    // At 'day' level, cannot drill further
+  }
+
+  // Go back up one level
+  function handleBack() {
+    if (drill.level === 'day') {
+      setDrill({ level: 'week', year: drill.year, month: drill.month, week: null });
+    } else if (drill.level === 'week') {
+      setDrill({ level: 'month', year: drill.year, month: null, week: null });
+    } else if (drill.level === 'month') {
+      setDrill({ level: 'year', year: null, month: null, week: null });
+    }
+  }
+
+  // Display current drill level text for user context
+  const drillLabel = {
+    year: 'Year',
+    month: `Months in ${drill.year}`,
+    week: `Weeks in ${drill.month} ${drill.year}`,
+    day: `Days in ${drill.week} of ${drill.month} ${drill.year}`
+  }[drill.level];
+
+  // Chart options
+  const chartOptions = {
+    chart: {
+        background: '#f4f4f4',
+      type: 'bar',
+      height: 350,
+      events: {
+        dataPointSelection: handleDataPointSelection
+      }
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        columnWidth: '55%',
+        borderRadius: 5,
+        borderRadiusApplication: 'end',
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    stroke: {
+      show: true,
+      width: 2,
+      colors: ['transparent'],
+    },
+    xaxis: {
+      categories,
+      labels: {
+        rotate: -45,
+        style: {
+          fontSize: '12px'
+        }
+      }
+    },
+    yaxis: {
+      title: {
+        text: 'Count',
+      }
+    },
+    fill: {
+      opacity: 1
+    },
+    tooltip: {
+      y: {
+        formatter: val => `${val} count${val !== 1 ? 's' : ''}`
+      }
+    },
+    legend: {
+      position: 'top',
+      horizontalAlign: 'center',
+      offsetX: 0,
+      offsetY: 0
+    }
+  };
+
+  return (
+    <div style={{ maxWidth: 1000, margin: '20px auto', fontFamily: 'Arial, sans-serif' }}>
+      <h2 style={{ textAlign: 'center', marginBottom: '8px' }}>Activity Counts by {drillLabel}</h2>
+      {(drill.level !== 'year') && (
+        <button
+          onClick={handleBack}
+          style={{
+            marginBottom: 12,
+            backgroundColor: '#007bff',
+            color: 'white',
+            border: 'none',
+            padding: '8px 16px',
+            borderRadius: 5,
+            cursor: 'pointer'
+          }}
+        >
+          &larr; Back
+        </button>
+      )}
+      <ApexChart
+        options={chartOptions}
+        series={series}
         type="bar"
         height={400}
-        width={980}
+        width={1100}
       />
     </div>
   );
-};
-
-export default Graph;
+}
 
