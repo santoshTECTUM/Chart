@@ -1,6 +1,7 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import ApexChart from 'react-apexcharts';
 import { groupActivities, groupActivitiesFullDate, groupActivitiesFullDateSorted, realInput } from '../inputDemo';
+import { Grid, TextareaAutosize } from '@mui/material';
 
 const inputData = {
   "2024": {
@@ -196,7 +197,7 @@ function getAllActivityTypes(data) {
         });
       }
       // recurse all children keys except 'data' and 'weak'
-      Object.entries(obj).forEach(([k,v]) => {
+      Object.entries(obj).forEach(([k, v]) => {
         if (k !== 'data' && k !== 'weak') {
           recurse(v);
         }
@@ -242,7 +243,7 @@ export default function Graph() {
       if (!months) return [];
       return Object.keys(months)
         .filter(k => k !== 'data' && k !== 'weak')
-        .sort((a,b) => new Date(`${a} 1, 2000`) - new Date(`${b} 1, 2000`));
+        .sort((a, b) => new Date(`${a} 1, 2000`) - new Date(`${b} 1, 2000`));
     }
     if (level === 'week') {
       const weeks = groupedFormation[context.year]?.[context.month]?.weak;
@@ -253,7 +254,7 @@ export default function Graph() {
       const daysObj = groupedFormation[context.year]?.[context.month]?.weak?.[context.week]?.days;
       if (!daysObj) return [];
       // Day keys as numbers sorted
-      return Object.keys(daysObj).sort((a,b) => parseInt(a) - parseInt(b));
+      return Object.keys(daysObj).sort((a, b) => parseInt(a) - parseInt(b));
     }
     return [];
   }
@@ -335,7 +336,7 @@ export default function Graph() {
   // Chart options
   const chartOptions = {
     chart: {
-        background: '#f4f4f4',
+      background: '#f4f4f4',
       type: 'bar',
       height: 350,
       events: {
@@ -388,33 +389,71 @@ export default function Graph() {
     }
   };
 
+
+  const [chartWidth, setChartWidth] = useState(0);
+  const [changeObject, setChangeObject] = useState();
+
+  useEffect(() => {
+    function updateWidth() {
+      // Let's say you want width to be 50% of window width plus 100 pixels
+      const width = window.innerWidth * 0.6 + 100;
+      setChartWidth(width);
+    }
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
+
+  const handleChange = (e, field) => {
+    const { value } = e.target;
+    console.log(value);
+    setChangeObject(value);
+  }
+
   return (
-    <div style={{ maxWidth: 1000, margin: '20px auto', fontFamily: 'Arial, sans-serif' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '8px' }}>Activity Counts by {drillLabel}</h2>
-      {(drill.level !== 'year') && (
-        <button
-          onClick={handleBack}
-          style={{
-            marginBottom: 12,
-            backgroundColor: '#007bff',
-            color: 'white',
-            border: 'none',
-            padding: '8px 16px',
-            borderRadius: 5,
-            cursor: 'pointer'
-          }}
-        >
-          &larr; Back
-        </button>
-      )}
-      <ApexChart
-        options={chartOptions}
-        series={series}
-        type="bar"
-        height={400}
-        width={1100}
-      />
-    </div>
+
+    <Grid container spacing={1}>
+      <Grid item sm={10}>
+        <h2 style={{ textAlign: 'center', marginBottom: '8px' }}>Activity Counts by {drillLabel}</h2>
+        {(drill.level !== 'year') && (
+          <button
+            onClick={handleBack}
+            style={{
+              marginBottom: 12,
+              backgroundColor: '#007bff',
+              color: 'white',
+              border: 'none',
+              padding: '8px 16px',
+              borderRadius: 5,
+              cursor: 'pointer'
+            }}
+          >
+            &larr; Back
+          </button>
+        )}
+        <ApexChart
+          options={chartOptions}
+          series={series}
+          type="bar"
+          height={400}
+          width={chartWidth}
+        />
+
+      </Grid>
+
+      <Grid item sm={2}>
+        <h2 style={{ textAlign: 'center', marginBottom: '8px' }}>Object Making</h2>
+        <TextareaAutosize
+          aria-label="minimum height"
+          minRows={3}
+          placeholder="Minimum 3 rows"
+          value={changeObject || ""}
+          onChange={(e) => handleChange(e,"obj")}
+        />
+
+      </Grid>
+    </Grid>
+
   );
 }
 

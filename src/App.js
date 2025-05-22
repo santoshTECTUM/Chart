@@ -13,17 +13,19 @@ function App() {
   );
   return (
 
-    <div className='appbar'>
+    <Box className="appbar">
       <Header />
-      <Grid container spacing={1}>
-        <Grid item sm={1.5}>
+
+      <Grid  container spacing={0.3} className="d-flex-wrap" >
+
+        <Grid item sm={2}>
           <h1>{`${sideBar}`} Chart</h1>
           <Stack direction="column" spacing={1}>
             {graphType[sideBar] ? (
               graphType[sideBar].map((item, key) => (
-                  <Button key={key} variant="contained" color="primary" onClick={() => {navigate(`/${sideBar}/${item.url}`)}}>
-                    {item.name}
-                  </Button>
+                <Button key={key} variant="contained" color="primary" onClick={() => { navigate(`/${sideBar}/${item.url}`) }}>
+                  {item.name}
+                </Button>
               ))
             ) : (
               <Typography variant="h6" color="error">
@@ -32,12 +34,13 @@ function App() {
             )}
           </Stack>
         </Grid>
-        <Grid item sm={9}>
+
+        <Grid item sm={10}>
           <Layouts />
         </Grid>
-      </Grid>
 
-    </div>
+      </Grid>
+    </Box>
 
   );
 }
