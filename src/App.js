@@ -5,6 +5,7 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { Layouts } from './Layout/Layouts';
 import { Box, Button, Grid, Link, Stack, Typography } from '@mui/material';
 import { graphType } from './Layout/routes';
+import GroupedCurrentPrevious from './Component/Graph/GroupedCurrentPrevious';
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -36,7 +37,8 @@ function App() {
         </Grid>
 
         <Grid item sm={10}>
-          <Layouts />
+          <GroupedCurrentPrevious />
+          {/* <Layouts /> */}
         </Grid>
 
       </Grid>

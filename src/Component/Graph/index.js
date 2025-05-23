@@ -352,7 +352,7 @@ export default function Graph() {
       },
     },
     dataLabels: {
-      enabled: false,
+      enabled: true,
     },
     stroke: {
       show: true,
@@ -410,6 +410,19 @@ export default function Graph() {
     setChangeObject(value);
   }
 
+
+
+  const data = [
+    {
+      "location_name": "",
+      "enemy_formation_name": "",
+      "equipment_name": "",
+      "prev_date": "",
+      "curr_prev":"",
+      "prev_count": "",
+      "curr_count": ""
+    }
+  ]
   return (
 
     <Grid container spacing={1}>
@@ -448,7 +461,7 @@ export default function Graph() {
           minRows={3}
           placeholder="Minimum 3 rows"
           value={changeObject || ""}
-          onChange={(e) => handleChange(e,"obj")}
+          onChange={(e) => handleChange(e, "obj")}
         />
 
       </Grid>
